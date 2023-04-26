@@ -13,8 +13,4 @@ public class SongsApplication {
 		SpringApplication.run(SongsApplication.class, args);
 	}
 
-	@GetMapping("/root")
-	public String apiRoot() {
-		return "Hello, BITCH!";
-	}
 }

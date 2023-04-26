@@ -1,10 +1,13 @@
-package ie.cct.groupproject.songs;
+package ie.cct.groupproject.songs.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data; //takes care of all getters and setters, toString methods, so we don't have to write it
 import lombok.NoArgsConstructor;
 import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.DocumentReference;
+
+import java.util.List;
 
 @Document(collection = "songs")
 @Data
@@ -34,4 +37,6 @@ public class Track {
     private double tempo;
     private int time_signature;
     private String track_genre;
+//    @DocumentReference
+//    private List<Comment> commentsIds;
 }

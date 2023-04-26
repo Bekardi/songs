@@ -1,4 +1,4 @@
-package ie.cct.groupproject.songs;
+package ie.cct.groupproject.songs.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
