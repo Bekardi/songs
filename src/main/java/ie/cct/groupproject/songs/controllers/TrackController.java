@@ -36,8 +36,8 @@ public class TrackController {
     public ModelAndView getTrackView() {
         ModelAndView mav = new ModelAndView("tracksView");
         List<Track> tracks = trackService.allTracks();
-//        List<Track> shortList = tracks.subList(0, 10);
-        mav.addObject("tracks", tracks );
+        List<Track> shortList = tracks.subList(0, 100);
+        mav.addObject("tracks", shortList );
         return mav;
     }
 
