@@ -34,7 +34,7 @@ public class TrackController {
 
     @GetMapping()
     public ModelAndView getTrackView() {
-        ModelAndView mav = new ModelAndView("tracksView");
+        ModelAndView mav = new ModelAndView("Tracks/tracksView");
         List<Track> tracks = trackService.allTracks();
         List<Track> shortList = tracks.subList(0, 100);
         mav.addObject("tracks", shortList );
