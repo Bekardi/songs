@@ -21,17 +21,6 @@ public class TrackController {
     private TrackService trackService;
 
     //returning the html file with tracks data
-    //http status 200 = standard response indicating that request has succeeded
-//    @GetMapping
-//    public ResponseEntity<List<Track>> getAllTracks() {
-//
-//        List<Track> shortList = new ArrayList<>();
-//        for (int i = 0; i < 10; i++) {
-//            shortList.add(trackService.allTracks().get(i));
-//        }
-//        return new ResponseEntity<List<Track>>(shortList, HttpStatus.OK);
-//    }
-
     @GetMapping()
     public ModelAndView getTrackView() {
         ModelAndView mav = new ModelAndView("Tracks/tracksView");
@@ -46,20 +35,4 @@ public class TrackController {
         return new ResponseEntity<Track>(trackService.findOne(id), HttpStatus.OK);
     }
 }
-
-//    @GetMapping("/{id}")
-//    public String getTrack(@PathVariable ObjectId id, Model model) {
-//        Track track = trackService.singleTrack(id).orElse(null);
-//        model.addAttribute("track", track);
-//        System.out.println(track.getTrack_name());
-//        return "bitch"; // returns the "track.html" template
-//    }
-//    @GetMapping("/{id}")
-//    public String getSingleTrack(@PathVariable ObjectId id, Model themodel) {
-//        Optional<Track> response = trackService.singleTrack(id);
-//        Track track = response.orElse(null);
-//        System.out.println(track.getTrack_name().toString());
-//        themodel.addAttribute("track", track.getTrack_name());
-//        return "page";
-//    }
 
