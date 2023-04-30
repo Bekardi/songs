@@ -3,6 +3,7 @@ package ie.cct.groupproject.songs.repositories;
 import ie.cct.groupproject.songs.models.Track;
 import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -10,5 +11,6 @@ import java.util.List;
 *   specifies the Track entity class and the type of ObjectId
 * (Helps to perform CRUD operations)
 * */
+@Repository
 public interface TrackRepository extends MongoRepository<Track, ObjectId> {
 }
